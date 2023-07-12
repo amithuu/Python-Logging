@@ -13,9 +13,9 @@
 # logging id mainly used to get the errors as we use in pytest @ xfail, so that we don't get message as error, in the same way we use these logging's, which keeps out data more securely and the messages which we want to pass as well.
 import logging
 
-logging.basicConfig(level=logging.DEBUG, filename=".....\logs\demologs.log", filemode='w')
+logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG, filename="demologs.log", filemode='w', datefmt='%m/%d/%Y %I:%M:%S %p')
 
-# By default, level will be "Warning"
+# Todo: By default, level will be "Warning"
 
 
 class DemoLogging1:
